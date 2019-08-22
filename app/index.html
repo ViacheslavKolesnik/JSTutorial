@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Notebook</title>
+
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no"> -->
+
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+</head>
+<body>
+	<header class="mdl-layout__header">
+		<h2>Best notebook ever!</h2>
+	</header>
+
+	<section class="note-creation mdl-layout">
+		<h3>Create new note here.</h3>
+		<div class="note-instance">
+			<div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class = "mdl-textfield__input" type = "text" required="required" id = "title_input">
+				<label class = "mdl-textfield__label" for = "title_input">Title</label>
+			</div>
+			<div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<textarea class = "mdl-textfield__input" type = "text" required="required" id = "content_input" rows="5"></textarea>
+				<label class = "mdl-textfield__label" for = "content_input">Content</label>
+			</div>
+		</div>
+	</section>
+
+	<section class="controls mdl-layout">
+			<button id="add-note-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+				Add
+			</button>
+			<button id="clear-notes-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+				Clear
+			</button>
+	</section>
+
+	<section class="notebook mdl-layout">
+		<h3>Your notes.</h3>
+		<div class="notebook-container" id="notebook-container">
+			<div class="notebook-row"></div>
+		</div>
+	</section>
+
+	<footer class="mdl-mega-footer">
+		<p class="rights">2019 © All rights reserved.</p>
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>
