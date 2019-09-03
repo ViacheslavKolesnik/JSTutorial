@@ -45,23 +45,21 @@ section
 .notebook
 	background-color: #939292
 	.notebook-container
+		min-height: 14.6vh
 		display: flex
-		flex-direction: column
-		.notebook-row
-			display: flex
-			flex-direction: row
-			.note-instance
-				position: relative
-				.remove-note
-					height: 25px
-					width: 25px
-					min-width: unset
-					position: absolute
-					top: 5px
-					right: 5px
-					p
-						font-size: 26px
-						transform: rotateZ(45deg)
+		flex-wrap: wrap
+		.note-instance
+			position: relative
+			.remove-note
+				height: 25px
+				width: 25px
+				min-width: unset
+				position: absolute
+				top: 5px
+				right: 5px
+				p
+					font-size: 26px
+					transform: rotateZ(45deg)
 
 .note-creation, .notebook
 	h3

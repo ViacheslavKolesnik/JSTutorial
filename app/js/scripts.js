@@ -29,8 +29,6 @@ let noteObjects;
 
 //Functions
 function addNote(note_title_text, note_content_text) {
-    let notebook_row = getNotebookRow();
-
     let note = createElement(note_element, note_instance_class, null);
     let note_remove = createElement(note_remove_element, note_remove_class, null);
     let note_title = createElement(note_title_element, note_title_class, note_title_text);
@@ -48,7 +46,7 @@ function addNote(note_title_text, note_content_text) {
 
     addRemoveNoteEvent(note_remove);
 
-    notebook_row.appendChild(note);
+    notebook_container.appendChild(note);
 
     saveNote(note_title.innerHTML, note_content.innerHTML, note_id)
 }
@@ -69,20 +67,6 @@ function createElement(element_type, element_class, content) {
     return element;
 }
 
-function getNotebookRow() {
-    let notebook_row = notebook_container.children.item(
-        notebook_container.childElementCount - 1
-    );
-
-    if (notebook_row.childElementCount >= 4) {
-        notebook_row = document.createElement(notebook_row_element);
-        notebook_row.classList.add(notebook_row_class)
-
-        notebook_container.appendChild(notebook_row);
-    }
-
-    return notebook_row;
-}
 
 function saveNote(note_title, note_content, note_id) {
     let noteObject = {
